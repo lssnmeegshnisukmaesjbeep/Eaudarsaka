@@ -1,4 +1,4 @@
-name: iokoi
+name: ERTEWSWA
 
 on:
   workflow_dispatch:
@@ -29,7 +29,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        build: [C.1, D.1, D.2, D.3, D.4]
+        build: [C.1, C.2, C.3, C.4, C.5, D.1, D.2, D.3, D.4, D.5]
         flag: [A, B, C, D, E, F, G, H, I, J, K, L, M, N]
     steps:
       - name: Jalankan perintah (default)
